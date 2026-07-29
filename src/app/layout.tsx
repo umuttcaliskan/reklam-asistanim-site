@@ -24,6 +24,7 @@ export const metadata: Metadata = {
     default: SITE_NAME,
     template: `%s | ${SITE_NAME}`,
   },
+  applicationName: SITE_NAME,
   description: SITE_DESCRIPTION,
   icons: {
     icon: [{ url: "/favicon.png", type: "image/png" }],
@@ -52,12 +53,18 @@ export const metadata: Metadata = {
     description: SITE_DESCRIPTION,
     images: ["/images/og-default.png"],
   },
+  appleWebApp: {
+    title: SITE_NAME,
+  },
   robots: {
     index: true,
     follow: true,
   },
   alternates: {
     canonical: SITE_URL,
+  },
+  other: {
+    "application-name": SITE_NAME,
   },
 };
 
