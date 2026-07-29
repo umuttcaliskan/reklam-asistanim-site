@@ -4,6 +4,7 @@ import { SITE_URL } from "@/lib/site";
 export default function sitemap(): MetadataRoute.Sitemap {
   const routes: { path: string; priority: number; freq: "weekly" | "monthly" }[] = [
     { path: "", priority: 1, freq: "weekly" },
+    { path: "/about", priority: 0.5, freq: "monthly" },
     { path: "/ozellikler", priority: 0.9, freq: "monthly" },
     { path: "/fiyatlandirma", priority: 0.9, freq: "monthly" },
     { path: "/blog", priority: 0.7, freq: "weekly" },

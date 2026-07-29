@@ -4,7 +4,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { HeroMock } from "@/components/marketing/PanelMock";
-import { appRegisterUrl, SITE_NAME, TRIAL_LABEL } from "@/lib/site";
+import { appRegisterUrl, TRIAL_LABEL } from "@/lib/site";
 
 export function Hero() {
   return (
@@ -22,25 +22,25 @@ export function Hero() {
             {TRIAL_LABEL} — hemen başlayın
           </motion.div>
 
-          <motion.p
-            className="mt-5 font-[family-name:var(--font-instrument)] text-3xl tracking-tight text-[var(--accent-deep)] sm:text-4xl"
-            initial={{ opacity: 0, y: 16 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.05 }}
-          >
-            {SITE_NAME}
-          </motion.p>
-
           <motion.h1
-            className="mt-3 text-4xl font-bold leading-[1.08] tracking-tight text-[var(--ink)] sm:text-5xl lg:text-6xl"
+            className="mt-5 text-4xl font-bold leading-[1.08] tracking-tight text-[var(--ink)] sm:text-5xl lg:text-6xl"
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.55, delay: 0.1 }}
+            transition={{ duration: 0.55, delay: 0.08 }}
+          >
+            Reklam Asistanım
+          </motion.h1>
+
+          <motion.p
+            className="mt-3 text-xl font-semibold tracking-tight text-[var(--ink)] sm:text-2xl"
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.12 }}
           >
             Yapay zeka{" "}
             <span className="text-[var(--accent-hover)]">reklamlarınızı yönetsin</span>,
             siz işinize odaklanın.
-          </motion.h1>
+          </motion.p>
 
           <motion.p
             className="mt-5 max-w-xl text-base leading-relaxed text-[var(--ink-muted)] sm:text-lg"
@@ -48,9 +48,30 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.16 }}
           >
-            Reklam Asistanım, Google Ads hesaplarınızı OAuth ile bağlayarak kampanya
-            yönetimi, performans raporlama ve optimizasyon sunan bir web uygulamasıdır.
-            Yapay zeka hesabınızı 7/24 analiz eder; onay her zaman sizde kalır.
+            Reklam Asistanım is a web application that connects to your Google Ads account
+            with OAuth so you can manage campaigns, view performance reports, and apply
+            optimizations. Reklam Asistanım, Google Ads hesaplarınızı OAuth ile bağlayarak
+            kampanya yönetimi, performans raporlama ve optimizasyon sunan bir web
+            uygulamasıdır.
+          </motion.p>
+
+          <motion.p
+            className="mt-3 text-sm text-[var(--ink-muted)]"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ delay: 0.2 }}
+          >
+            <Link href="/gizlilik-politikasi" className="font-medium text-[var(--accent-hover)] underline">
+              Gizlilik Politikası
+            </Link>
+            {" · "}
+            <Link href="/hizmet-sartlari" className="font-medium text-[var(--accent-hover)] underline">
+              Hizmet Şartları
+            </Link>
+            {" · "}
+            <Link href="/about" className="font-medium text-[var(--accent-hover)] underline">
+              About Reklam Asistanım
+            </Link>
           </motion.p>
 
           <motion.div
