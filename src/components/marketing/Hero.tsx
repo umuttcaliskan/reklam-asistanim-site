@@ -23,7 +23,7 @@ export function Hero() {
           </motion.div>
 
           <motion.h1
-            className="mt-7 font-[family-name:var(--font-instrument)] text-5xl leading-[1.05] tracking-tight text-[var(--accent-deep)] sm:text-6xl lg:text-7xl"
+            className="mt-7 text-5xl font-extrabold leading-[1.02] tracking-[-0.03em] text-[var(--accent-deep)] sm:text-6xl lg:text-7xl"
             initial={{ opacity: 0, y: 22 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.06, ease: [0.22, 1, 0.36, 1] }}
