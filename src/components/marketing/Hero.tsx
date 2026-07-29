@@ -4,92 +4,70 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { HeroMock } from "@/components/marketing/PanelMock";
-import { appRegisterUrl, TRIAL_LABEL } from "@/lib/site";
+import { appRegisterUrl, SITE_NAME, TRIAL_LABEL } from "@/lib/site";
 
 export function Hero() {
   return (
     <section className="bg-hero-glow relative overflow-hidden">
-      <div className="pointer-events-none absolute inset-0 bg-grid opacity-60" />
-      <div className="relative mx-auto max-w-6xl px-4 pb-20 pt-14 sm:px-6 sm:pb-28 sm:pt-20">
+      <div className="pointer-events-none absolute inset-0 bg-grid opacity-50" />
+      <div className="relative mx-auto max-w-6xl px-4 pb-20 pt-16 sm:px-6 sm:pb-28 sm:pt-24">
         <div className="mx-auto flex max-w-3xl flex-col items-center text-center">
           <motion.div
-            className="inline-flex items-center gap-2 rounded-full border border-emerald-200 bg-white/80 px-3 py-1.5 text-xs font-semibold text-emerald-800"
+            className="inline-flex items-center gap-2 rounded-full border border-emerald-200/80 bg-white/70 px-3.5 py-1.5 text-xs font-medium tracking-wide text-emerald-800 backdrop-blur-sm"
             initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.45 }}
           >
             <Sparkles className="h-3.5 w-3.5 text-emerald-500" />
-            {TRIAL_LABEL} — hemen başlayın
+            {TRIAL_LABEL}
           </motion.div>
 
           <motion.h1
-            className="mt-5 text-4xl font-bold leading-[1.08] tracking-tight text-[var(--ink)] sm:text-5xl lg:text-6xl"
-            initial={{ opacity: 0, y: 24 }}
+            className="mt-7 font-[family-name:var(--font-instrument)] text-5xl leading-[1.05] tracking-tight text-[var(--accent-deep)] sm:text-6xl lg:text-7xl"
+            initial={{ opacity: 0, y: 22 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.55, delay: 0.08 }}
+            transition={{ duration: 0.6, delay: 0.06, ease: [0.22, 1, 0.36, 1] }}
           >
-            Reklam Asistanım
+            {SITE_NAME}
           </motion.h1>
 
           <motion.p
-            className="mt-3 text-xl font-semibold tracking-tight text-[var(--ink)] sm:text-2xl"
-            initial={{ opacity: 0, y: 16 }}
+            className="mt-5 max-w-2xl text-xl font-semibold leading-snug tracking-tight text-[var(--ink)] sm:text-2xl lg:text-[1.75rem]"
+            initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.12 }}
+            transition={{ duration: 0.55, delay: 0.14 }}
           >
             Yapay zeka{" "}
             <span className="text-[var(--accent-hover)]">reklamlarınızı yönetsin</span>,
-            siz işinize odaklanın.
+            siz büyümeye odaklanın.
           </motion.p>
 
           <motion.p
-            className="mt-5 max-w-xl text-base leading-relaxed text-[var(--ink-muted)] sm:text-lg"
-            initial={{ opacity: 0, y: 20 }}
+            className="mt-5 max-w-lg text-base leading-relaxed text-[var(--ink-muted)] sm:text-lg"
+            initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.16 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
           >
-            Reklam Asistanım is a web application that connects to your Google Ads account
-            with OAuth so you can manage campaigns, view performance reports, and apply
-            optimizations. Reklam Asistanım, Google Ads hesaplarınızı OAuth ile bağlayarak
-            kampanya yönetimi, performans raporlama ve optimizasyon sunan bir web
-            uygulamasıdır.
-          </motion.p>
-
-          <motion.p
-            className="mt-3 text-sm text-[var(--ink-muted)]"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ delay: 0.2 }}
-          >
-            <Link href="/gizlilik-politikasi" className="font-medium text-[var(--accent-hover)] underline">
-              Gizlilik Politikası
-            </Link>
-            {" · "}
-            <Link href="/hizmet-sartlari" className="font-medium text-[var(--accent-hover)] underline">
-              Hizmet Şartları
-            </Link>
-            {" · "}
-            <Link href="/about" className="font-medium text-[var(--accent-hover)] underline">
-              About Reklam Asistanım
-            </Link>
+            Google Ads, raporlar ve yapay zeka içgörüleri tek panelde. Kampanyalarınızı
+            daha sakin, daha akıllı yönetin.
           </motion.p>
 
           <motion.div
-            className="mt-8 flex flex-wrap items-center justify-center gap-3"
-            initial={{ opacity: 0, y: 16 }}
+            className="mt-9 flex flex-wrap items-center justify-center gap-3"
+            initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.24 }}
+            transition={{ duration: 0.5, delay: 0.26 }}
           >
             <a
               href={appRegisterUrl}
-              className="inline-flex items-center gap-2 rounded-xl bg-[var(--accent)] px-5 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-[var(--accent-hover)]"
+              className="inline-flex items-center gap-2 rounded-xl bg-[var(--accent)] px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-[var(--accent-hover)]"
             >
               Ücretsiz dene
               <ArrowRight className="h-4 w-4" />
             </a>
             <Link
               href="/fiyatlandirma"
-              className="inline-flex items-center gap-2 rounded-xl border border-[var(--line)] bg-white/80 px-5 py-3 text-sm font-semibold text-[var(--ink)] transition hover:border-emerald-200 hover:bg-white"
+              className="inline-flex items-center gap-2 rounded-xl border border-[var(--line)] bg-white/80 px-6 py-3 text-sm font-semibold text-[var(--ink)] transition hover:border-emerald-200 hover:bg-white"
             >
               Planları gör
             </Link>
@@ -97,10 +75,10 @@ export function Hero() {
         </div>
 
         <motion.div
-          className="mt-14 sm:mt-20"
+          className="mt-16 sm:mt-20"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.35, ease: [0.22, 1, 0.36, 1] }}
+          transition={{ duration: 0.7, delay: 0.34, ease: [0.22, 1, 0.36, 1] }}
         >
           <div className="mx-auto max-w-3xl">
             <HeroMock />
@@ -108,13 +86,12 @@ export function Hero() {
         </motion.div>
 
         <motion.p
-          className="mt-12 flex flex-wrap items-center justify-center gap-2 text-center text-sm text-[var(--ink-muted)]"
+          className="mt-12 text-center text-sm tracking-wide text-[var(--ink-muted)]"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
-          transition={{ delay: 0.6 }}
+          transition={{ delay: 0.55 }}
         >
-          <Sparkles className="h-4 w-4 text-[var(--accent)]" />
-          Google Ads · Search Console · İşletme Profili · AI içerik üretimi — tek panelde
+          Google Ads · Search Console · İşletme Profili · AI
         </motion.p>
       </div>
     </section>
