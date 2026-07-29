@@ -56,7 +56,7 @@ Build komutu: `next build` (varsayılan).
 | `/akademi` | Video eğitim setleri (YouTube embed) |
 | `/sss` | Sıkça sorulan sorular |
 | `/iletisim` | İletişim formu + toplantı planlama |
-| `/gizlilik-politikasi`, `/hizmet-sartlari`, `/kvkk` | Yasal |
+| `/gizlilik-politikasi`, `/hizmet-sartlari`, `/cerez-politikasi`, `/kvkk` | Yasal |
 | `/sitemap.xml`, `/robots.txt` | SEO |
 
 ## Not

@@ -45,6 +45,7 @@ const columns: {
     links: [
       { href: "/gizlilik-politikasi", label: "Gizlilik Politikası" },
       { href: "/hizmet-sartlari", label: "Hizmet Şartları" },
+      { href: "/cerez-politikasi", label: "Çerez Politikası" },
       { href: "/kvkk", label: "KVKK Aydınlatma" },
     ],
   },
@@ -154,14 +155,33 @@ export function Footer() {
       </div>
 
       <div className="border-t border-[var(--line)]">
-        <div className="mx-auto flex max-w-6xl flex-col gap-2 px-4 py-6 text-xs text-[var(--ink-muted)] sm:flex-row sm:items-center sm:justify-between sm:px-6">
-          <p>© {new Date().getFullYear()} {SITE_NAME}. Tüm hakları saklıdır.</p>
-          <p>
-            Uygulama:{" "}
-            <a href={APP_URL} className="font-medium text-[var(--accent-hover)] hover:underline">
-              app.reklamasistanim.com
-            </a>
-          </p>
+        <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-6 text-xs text-[var(--ink-muted)] sm:px-6">
+          <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+            <p>© {new Date().getFullYear()} {SITE_NAME}. Tüm hakları saklıdır.</p>
+            <p>
+              Uygulama:{" "}
+              <a href={APP_URL} className="font-medium text-[var(--accent-hover)] hover:underline">
+                app.reklamasistanim.com
+              </a>
+            </p>
+          </div>
+          <nav
+            aria-label="Yasal bağlantılar"
+            className="flex flex-wrap gap-x-4 gap-y-1 sm:justify-end"
+          >
+            <Link href="/gizlilik-politikasi" className="hover:text-[var(--accent-hover)] hover:underline">
+              Gizlilik
+            </Link>
+            <Link href="/hizmet-sartlari" className="hover:text-[var(--accent-hover)] hover:underline">
+              Hizmet Şartları
+            </Link>
+            <Link href="/cerez-politikasi" className="hover:text-[var(--accent-hover)] hover:underline">
+              Çerez Politikası
+            </Link>
+            <Link href="/kvkk" className="hover:text-[var(--accent-hover)] hover:underline">
+              KVKK
+            </Link>
+          </nav>
         </div>
       </div>
     </footer>

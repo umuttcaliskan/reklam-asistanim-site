@@ -12,6 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { path: "/iletisim", priority: 0.6, freq: "monthly" },
     { path: "/gizlilik-politikasi", priority: 0.4, freq: "monthly" },
     { path: "/hizmet-sartlari", priority: 0.4, freq: "monthly" },
+    { path: "/cerez-politikasi", priority: 0.4, freq: "monthly" },
     { path: "/kvkk", priority: 0.4, freq: "monthly" },
   ];
 
