@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Instrument_Serif, Plus_Jakarta_Sans } from "next/font/google";
-import { Footer } from "@/components/marketing/Footer";
-import { Header } from "@/components/marketing/Header";
+import { SiteChrome } from "@/components/SiteChrome";
 import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/site";
 import "./globals.css";
 
@@ -72,9 +71,7 @@ export default function RootLayout({
       className={`${jakarta.variable} ${instrument.variable} h-full antialiased`}
     >
       <body className="flex min-h-full flex-col font-sans">
-        <Header />
-        <main className="flex-1">{children}</main>
-        <Footer />
+        <SiteChrome>{children}</SiteChrome>
       </body>
     </html>
   );
