@@ -12,14 +12,10 @@ export function Hero() {
       <div className="pointer-events-none absolute inset-0 bg-grid opacity-50" />
       <div className="relative mx-auto max-w-6xl px-4 pb-20 pt-16 sm:px-6 sm:pb-28 sm:pt-24">
         <div className="mx-auto flex max-w-3xl flex-col items-center text-center">
-          <motion.h1
-            className="text-5xl font-extrabold leading-[1.02] tracking-[-0.03em] text-[var(--accent-deep)] sm:text-6xl lg:text-7xl"
-            initial={{ opacity: 0, y: 22 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-          >
+          {/* Static H1 — must stay opacity:1 for OAuth brand crawlers */}
+          <h1 className="text-5xl font-extrabold leading-[1.02] tracking-[-0.03em] text-[var(--accent-deep)] sm:text-6xl lg:text-7xl">
             {SITE_NAME}
-          </motion.h1>
+          </h1>
 
           <motion.p
             className="mt-5 max-w-2xl text-xl font-semibold leading-snug tracking-tight text-[var(--ink)] sm:text-2xl lg:text-[1.75rem]"
