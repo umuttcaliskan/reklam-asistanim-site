@@ -12,21 +12,11 @@ export function Hero() {
       <div className="pointer-events-none absolute inset-0 bg-grid opacity-50" />
       <div className="relative mx-auto max-w-6xl px-4 pb-20 pt-16 sm:px-6 sm:pb-28 sm:pt-24">
         <div className="mx-auto flex max-w-3xl flex-col items-center text-center">
-          <motion.div
-            className="inline-flex items-center gap-2 rounded-full border border-emerald-200/80 bg-white/70 px-3.5 py-1.5 text-xs font-medium tracking-wide text-emerald-800 backdrop-blur-sm"
-            initial={{ opacity: 0, y: 12 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.45 }}
-          >
-            <Sparkles className="h-3.5 w-3.5 text-emerald-500" />
-            {TRIAL_LABEL}
-          </motion.div>
-
           <motion.h1
-            className="mt-7 text-5xl font-extrabold leading-[1.02] tracking-[-0.03em] text-[var(--accent-deep)] sm:text-6xl lg:text-7xl"
+            className="text-5xl font-extrabold leading-[1.02] tracking-[-0.03em] text-[var(--accent-deep)] sm:text-6xl lg:text-7xl"
             initial={{ opacity: 0, y: 22 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.06, ease: [0.22, 1, 0.36, 1] }}
+            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
           >
             {SITE_NAME}
           </motion.h1>
@@ -35,7 +25,7 @@ export function Hero() {
             className="mt-5 max-w-2xl text-xl font-semibold leading-snug tracking-tight text-[var(--ink)] sm:text-2xl lg:text-[1.75rem]"
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.55, delay: 0.14 }}
+            transition={{ duration: 0.55, delay: 0.08 }}
           >
             Yapay zeka{" "}
             <span className="text-[var(--accent-hover)]">reklamlarınızı yönetsin</span>,
@@ -46,7 +36,7 @@ export function Hero() {
             className="mt-5 max-w-lg text-base leading-relaxed text-[var(--ink-muted)] sm:text-lg"
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
+            transition={{ duration: 0.5, delay: 0.14 }}
           >
             Google Ads, raporlar ve yapay zeka içgörüleri tek panelde. Kampanyalarınızı
             daha sakin, daha akıllı yönetin.
@@ -56,7 +46,7 @@ export function Hero() {
             className="mt-9 flex flex-wrap items-center justify-center gap-3"
             initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.26 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
           >
             <a
               href={appRegisterUrl}
@@ -71,6 +61,16 @@ export function Hero() {
             >
               Planları gör
             </Link>
+          </motion.div>
+
+          <motion.div
+            className="mt-5 inline-flex items-center gap-2 rounded-full border border-emerald-200/80 bg-white/70 px-3.5 py-1.5 text-xs font-medium tracking-wide text-emerald-800 backdrop-blur-sm"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.45, delay: 0.28 }}
+          >
+            <Sparkles className="h-3.5 w-3.5 text-emerald-500" />
+            {TRIAL_LABEL}
           </motion.div>
         </div>
 
