@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Reklam Asistanım — Tanıtım Sitesi
 
-## Getting Started
+`reklamasistanim.com` için Next.js (App Router) marketing sitesi.
 
-First, run the development server:
+- **Stack:** Next.js 16 · TypeScript · Tailwind CSS v4 · Framer Motion
+- **Uygulama (CTA):** [app.reklamasistanim.com](https://app.reklamasistanim.com)
+- **Dil:** Türkçe
+
+## Yerel geliştirme
 
 ```bash
+cd reklamasistanim-site
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Açık: [http://localhost:3000](http://localhost:3000)
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Ortam değişkenleri
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+| Değişken | Varsayılan | Açıklama |
+|----------|------------|----------|
+| `NEXT_PUBLIC_SITE_URL` | `https://reklamasistanim.com` | Canonical / sitemap |
+| `NEXT_PUBLIC_APP_URL` | `https://app.reklamasistanim.com` | Giriş / kayıt CTA'ları |
 
-## Learn More
+Vercel'de Project → Settings → Environment Variables içine ekleyin.
 
-To learn more about Next.js, take a look at the following resources:
+## Yapılandırılacaklar
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- **OG görseli:** `public/images/og-default.png` (1200×630) — bkz. [IMAGES.md](./IMAGES.md)
+- **Toplantı linki:** `src/lib/site.ts` → `MEETING_URL` (placeholder Calendly)
+- **Akademi videoları:** `src/lib/resources.ts` → `youtubeId` değerleri (şu an placeholder)
+- **Blog içerikleri:** `src/lib/resources.ts` → `BLOG_POSTS` (dummy; CMS sonra)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Vercel deploy
 
-## Deploy on Vercel
+1. Bu klasörü ayrı bir GitHub reposuna itin (ör. `reklamasistanim-site`).
+2. [Vercel](https://vercel.com) → **Add New Project** → repo'yu bağlayın.
+3. Framework: Next.js (otomatik). Root Directory: repo kökü.
+4. Env: `NEXT_PUBLIC_APP_URL`, isteğe bağlı `NEXT_PUBLIC_SITE_URL`.
+5. Deploy sonrası **Domains**:
+   - `reklamasistanim.com`
+   - `www.reklamasistanim.com` (apex'e redirect)
+6. DNS: domain sağlayıcınızda Vercel'in verdiği A / CNAME kayıtlarını ekleyin.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Build komutu: `next build` (varsayılan).
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Sayfalar
+
+| Yol | İçerik |
+|-----|--------|
+| `/` | Landing (AI hero, animasyonlu panel mockup'ları, mobil uygulama, fiyat teaser) |
+| `/ozellikler` | Özellik derin anlatım |
+| `/fiyatlandirma` | Paketler + karşılaştırma tablosu |
+| `/blog` | Blog listesi (dummy) |
+| `/akademi` | Video eğitim setleri (YouTube embed) |
+| `/sss` | Sıkça sorulan sorular |
+| `/iletisim` | İletişim formu + toplantı planlama |
+| `/gizlilik-politikasi`, `/hizmet-sartlari`, `/kvkk` | Yasal |
+| `/sitemap.xml`, `/robots.txt` | SEO |
+
+## Not
+
+Console paneli (`reklam-asistanim-web`) bu projeden ayrıdır; bu site yalnızca tanıtım ve yasal URL'ler içindir.
