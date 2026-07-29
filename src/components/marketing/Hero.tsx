@@ -4,7 +4,7 @@ import Link from "next/link";
 import { motion } from "framer-motion";
 import { ArrowRight, Sparkles } from "lucide-react";
 import { HeroMock } from "@/components/marketing/PanelMock";
-import { appRegisterUrl, TRIAL_LABEL } from "@/lib/site";
+import { appRegisterUrl, SITE_NAME, TRIAL_LABEL } from "@/lib/site";
 
 export function Hero() {
   return (
@@ -22,11 +22,20 @@ export function Hero() {
             {TRIAL_LABEL} — hemen başlayın
           </motion.div>
 
+          <motion.p
+            className="mt-5 font-[family-name:var(--font-instrument)] text-3xl tracking-tight text-[var(--accent-deep)] sm:text-4xl"
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.05 }}
+          >
+            {SITE_NAME}
+          </motion.p>
+
           <motion.h1
-            className="mt-5 text-4xl font-bold leading-[1.08] tracking-tight text-[var(--ink)] sm:text-5xl lg:text-6xl"
+            className="mt-3 text-4xl font-bold leading-[1.08] tracking-tight text-[var(--ink)] sm:text-5xl lg:text-6xl"
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.55, delay: 0.08 }}
+            transition={{ duration: 0.55, delay: 0.1 }}
           >
             Yapay zeka{" "}
             <span className="text-[var(--accent-hover)]">reklamlarınızı yönetsin</span>,
@@ -39,9 +48,9 @@ export function Hero() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.16 }}
           >
-            Reklam Asistanım&apos;ın yapay zekası Google Ads hesabınızı 7/24 analiz eder,
-            kampanyaları kurar, boşa harcamayı keser ve her hafta detaylı PDF rapor sunar.
-            Onay her zaman sizde.
+            Reklam Asistanım, Google Ads hesaplarınızı OAuth ile bağlayarak kampanya
+            yönetimi, performans raporlama ve optimizasyon sunan bir web uygulamasıdır.
+            Yapay zeka hesabınızı 7/24 analiz eder; onay her zaman sizde kalır.
           </motion.p>
 
           <motion.div
