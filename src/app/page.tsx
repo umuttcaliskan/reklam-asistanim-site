@@ -9,7 +9,8 @@ import { TrustStrip } from "@/components/marketing/TrustStrip";
 import { SITE_DESCRIPTION, SITE_NAME } from "@/lib/site";
 
 export const metadata: Metadata = {
-  title: `${SITE_NAME} — Yapay zeka destekli Google Ads yönetimi`,
+  // Google OAuth branding: App name must match homepage <title> exactly
+  title: { absolute: SITE_NAME },
   description: SITE_DESCRIPTION,
   alternates: { canonical: "/" },
 };
