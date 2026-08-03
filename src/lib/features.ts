@@ -142,17 +142,52 @@ export const FEATURES: FeatureBlock[] = [
 export const HOW_IT_WORKS = [
   {
     step: "1",
-    title: "Kayıt olun",
-    text: "3 gün ücretsiz deneme ile hesabınızı oluşturun ve panele girin.",
+    title: "Hesapları bağlayın",
+    text: "Google Ads (ve yakında Meta) ile Search Console’u güvenli OAuth ile bağlayın.",
   },
   {
     step: "2",
-    title: "Google Ads bağlayın",
-    text: "OAuth ile hesabınızı güvenli bağlayın; aktif müşteri hesabınızı seçin.",
+    title: "AI otonom izlesin",
+    text: "Yapay zeka bütçe, teklif ve arama terimlerini sürekli tarar; aksiyon listesini hazırlar.",
   },
   {
     step: "3",
-    title: "AI'ya bırakın",
-    text: "Yapay zeka analiz etsin, önersin, kurulumları yapsın — siz onaylayın ve raporları izleyin.",
+    title: "Onaylayın, büyütün",
+    text: "Önerileri onayınızla uygulayın; blog ve raporlarla organik ve ücretli büyümeyi takip edin.",
+  },
+];
+
+export const PRODUCT_PILLARS = [
+  {
+    id: "google-ads",
+    href: "/urun/google-ads",
+    title: "Google Ads",
+    badge: null as string | null,
+    summary:
+      "Kampanya kurulumundan otonom optimizasyona — Google Ads derinliği tek panelde.",
+  },
+  {
+    id: "meta-ads",
+    href: "/urun/meta-ads",
+    title: "Meta Ads",
+    badge: "Yakında",
+    summary:
+      "Facebook ve Instagram reklamları aynı AI asistanla — erken erişimde öncelikli.",
+  },
+  {
+    id: "organik",
+    href: "/urun/organik",
+    title: "Organik & Blog",
+    badge: null,
+    summary:
+      "Search Console fırsatları, AI blog ve WordPress yayın / aylık plan.",
+  },
+  {
+    id: "ai-asistan",
+    href: "/urun/ai-asistan",
+    title: "AI Asistan",
+    badge: null,
+    summary:
+      "Hesabınıza soru sorun; otonom öneriler ve onaylı aksiyonlarla ilerleyin.",
   },
 ];

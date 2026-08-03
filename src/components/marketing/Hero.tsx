@@ -1,95 +1,110 @@
 "use client";
 
-import Link from "next/link";
 import { motion } from "framer-motion";
-import { ArrowRight, Sparkles } from "lucide-react";
+import { CtaPair } from "@/components/marketing/CtaPair";
 import { HeroMock } from "@/components/marketing/PanelMock";
-import { appRegisterUrl, SITE_NAME, TRIAL_LABEL } from "@/lib/site";
+import { SITE_NAME, TRIAL_LABEL } from "@/lib/site";
+
+const CHANNELS = [
+  { name: "Google Ads", soon: false },
+  { name: "Meta Ads", soon: true },
+  { name: "Search Console", soon: false },
+  { name: "WordPress", soon: false },
+];
 
 export function Hero() {
   return (
     <section className="bg-hero-glow relative overflow-hidden">
-      <div className="pointer-events-none absolute inset-0 bg-grid opacity-50" />
-      <div className="relative mx-auto max-w-6xl px-4 pb-20 pt-16 sm:px-6 sm:pb-28 sm:pt-24">
+      <div className="pointer-events-none absolute inset-0 bg-grid opacity-30" />
+      <div className="relative mx-auto max-w-6xl px-4 pb-8 pt-16 sm:px-6 sm:pb-12 sm:pt-24">
         <div className="mx-auto flex max-w-3xl flex-col items-center text-center">
+          <motion.p
+            className="mb-5 inline-flex items-center gap-2 rounded-full border border-[var(--line)] bg-white/[0.04] px-3.5 py-1.5 text-xs font-semibold text-[var(--accent)]"
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.4 }}
+          >
+            <span className="h-1.5 w-1.5 rounded-full bg-[var(--accent)]" />
+            {TRIAL_LABEL}
+          </motion.p>
+
           {/* Static H1 — must stay opacity:1 for OAuth brand crawlers */}
-          <h1 className="text-5xl font-extrabold leading-[1.02] tracking-[-0.03em] text-[var(--accent-deep)] sm:text-6xl lg:text-7xl">
+          <h1 className="font-[family-name:var(--font-display)] text-5xl font-semibold leading-[1.05] tracking-[-0.03em] text-white sm:text-6xl lg:text-7xl">
             {SITE_NAME}
           </h1>
 
           <motion.p
-            className="mt-5 max-w-2xl text-xl font-semibold leading-snug tracking-tight text-[var(--ink)] sm:text-2xl lg:text-[1.75rem]"
-            initial={{ opacity: 0, y: 18 }}
+            className="mt-6 max-w-2xl text-xl font-medium leading-snug tracking-tight text-white/90 sm:text-2xl"
+            initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.55, delay: 0.08 }}
+            transition={{ duration: 0.5, delay: 0.06 }}
           >
-            Yapay zeka{" "}
-            <span className="text-[var(--accent-hover)]">reklamlarınızı yönetsin</span>,
-            siz büyümeye odaklanın.
+            Google ve Meta reklamlarınızı{" "}
+            <span className="text-[var(--accent)]">AI otonom optimize etsin</span>
           </motion.p>
 
           <motion.p
-            className="mt-5 max-w-lg text-base leading-relaxed text-[var(--ink-muted)] sm:text-lg"
-            initial={{ opacity: 0, y: 16 }}
+            className="mt-4 max-w-lg text-base leading-relaxed text-[var(--ink-muted)] sm:text-lg"
+            initial={{ opacity: 0, y: 14 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.14 }}
+            transition={{ duration: 0.45, delay: 0.12 }}
           >
-            Google Ads, raporlar ve yapay zeka içgörüleri tek panelde. Kampanyalarınızı
-            daha sakin, daha akıllı yönetin.
+            Hesabı sürekli izler, önerir, onayınızla uygular. Organik büyümeyi GSC + blog
+            ile aynı panelde bağlayın.
           </motion.p>
 
           <motion.div
-            className="mt-9 flex flex-wrap items-center justify-center gap-3"
-            initial={{ opacity: 0, y: 14 }}
+            className="mt-8 flex w-full justify-center"
+            initial={{ opacity: 0, y: 12 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.2 }}
+            transition={{ duration: 0.45, delay: 0.18 }}
           >
-            <a
-              href={appRegisterUrl}
-              className="inline-flex items-center gap-2 rounded-xl bg-[var(--accent)] px-6 py-3 text-sm font-semibold text-white shadow-sm transition hover:bg-[var(--accent-hover)]"
-            >
-              Ücretsiz dene
-              <ArrowRight className="h-4 w-4" />
-            </a>
-            <Link
-              href="/fiyatlandirma"
-              className="inline-flex items-center gap-2 rounded-xl border border-[var(--line)] bg-white/80 px-6 py-3 text-sm font-semibold text-[var(--ink)] transition hover:border-emerald-200 hover:bg-white"
-            >
-              Planları gör
-            </Link>
+            <CtaPair showTrialHint className="items-center sm:items-center" />
           </motion.div>
 
           <motion.div
-            className="mt-5 inline-flex items-center gap-2 rounded-full border border-emerald-200/80 bg-white/70 px-3.5 py-1.5 text-xs font-medium tracking-wide text-emerald-800 backdrop-blur-sm"
-            initial={{ opacity: 0, y: 10 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.45, delay: 0.28 }}
+            className="mt-10 flex flex-wrap items-center justify-center gap-2"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5, delay: 0.28 }}
           >
-            <Sparkles className="h-3.5 w-3.5 text-emerald-500" />
-            {TRIAL_LABEL}
+            {CHANNELS.map((ch) => (
+              <span
+                key={ch.name}
+                className="inline-flex items-center gap-1.5 rounded-lg border border-[var(--line)] bg-white/[0.03] px-3 py-1.5 text-xs font-medium text-[var(--ink-muted)]"
+              >
+                <span
+                  className={
+                    ch.soon
+                      ? "h-1.5 w-1.5 rounded-full bg-amber-400"
+                      : "h-1.5 w-1.5 rounded-full bg-[var(--accent)]"
+                  }
+                />
+                {ch.name}
+                {ch.soon ? (
+                  <span className="text-[10px] font-semibold uppercase tracking-wide text-amber-400/90">
+                    yakında
+                  </span>
+                ) : null}
+              </span>
+            ))}
           </motion.div>
         </div>
+      </div>
 
-        <motion.div
-          className="mt-16 sm:mt-20"
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.34, ease: [0.22, 1, 0.36, 1] }}
-        >
-          <div className="mx-auto max-w-3xl">
+      <motion.div
+        className="relative w-full"
+        initial={{ opacity: 0, y: 28 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.65, delay: 0.32, ease: [0.22, 1, 0.36, 1] }}
+      >
+        <div className="pointer-events-none absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-transparent to-black/40" />
+        <div className="relative mx-auto max-w-5xl px-2 sm:px-4">
+          <div className="overflow-hidden rounded-t-2xl border border-b-0 border-white/10 shadow-2xl shadow-black/50">
             <HeroMock />
           </div>
-        </motion.div>
-
-        <motion.p
-          className="mt-12 text-center text-sm tracking-wide text-[var(--ink-muted)]"
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 0.55 }}
-        >
-          Google Ads · Search Console · İşletme Profili · AI
-        </motion.p>
-      </div>
+        </div>
+      </motion.div>
     </section>
   );
 }

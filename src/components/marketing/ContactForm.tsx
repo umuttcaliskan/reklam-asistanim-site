@@ -21,13 +21,13 @@ export function ContactForm() {
   }
 
   const inputClass =
-    "w-full rounded-xl border border-[var(--line)] bg-white px-4 py-2.5 text-sm text-[var(--ink)] outline-none transition placeholder:text-slate-400 focus:border-emerald-300 focus:ring-2 focus:ring-emerald-100";
+    "w-full rounded-xl border border-[var(--line)] bg-[var(--paper)] px-4 py-2.5 text-sm text-white outline-none transition placeholder:text-[var(--ink-muted)] focus:border-[var(--accent)]/50 focus:ring-2 focus:ring-[var(--accent-soft)]";
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
       <div className="grid gap-4 sm:grid-cols-2">
         <div>
-          <label htmlFor="name" className="mb-1.5 block text-xs font-semibold text-[var(--ink)]">
+          <label htmlFor="name" className="mb-1.5 block text-xs font-semibold text-white">
             Ad Soyad
           </label>
           <input
@@ -40,7 +40,7 @@ export function ContactForm() {
           />
         </div>
         <div>
-          <label htmlFor="email" className="mb-1.5 block text-xs font-semibold text-[var(--ink)]">
+          <label htmlFor="email" className="mb-1.5 block text-xs font-semibold text-white">
             E-posta
           </label>
           <input
@@ -55,7 +55,7 @@ export function ContactForm() {
         </div>
       </div>
       <div>
-        <label htmlFor="subject" className="mb-1.5 block text-xs font-semibold text-[var(--ink)]">
+        <label htmlFor="subject" className="mb-1.5 block text-xs font-semibold text-white">
           Konu
         </label>
         <select
@@ -72,7 +72,7 @@ export function ContactForm() {
         </select>
       </div>
       <div>
-        <label htmlFor="message" className="mb-1.5 block text-xs font-semibold text-[var(--ink)]">
+        <label htmlFor="message" className="mb-1.5 block text-xs font-semibold text-white">
           Mesajınız
         </label>
         <textarea
@@ -87,7 +87,7 @@ export function ContactForm() {
       </div>
       <button
         type="submit"
-        className="inline-flex items-center gap-2 rounded-xl bg-[var(--accent)] px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-[var(--accent-hover)]"
+        className="inline-flex items-center gap-2 rounded-xl bg-[var(--accent)] px-5 py-2.5 text-sm font-semibold text-[#04150f] transition hover:bg-[var(--accent-hover)]"
       >
         <Send className="h-4 w-4" />
         Gönder

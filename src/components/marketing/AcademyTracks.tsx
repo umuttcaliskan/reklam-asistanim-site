@@ -24,8 +24,8 @@ export function AcademyTracks() {
             }}
             className={`rounded-xl border px-4 py-2 text-sm font-semibold transition ${
               t.id === activeTrack
-                ? "border-emerald-300 bg-emerald-50 text-emerald-800"
-                : "border-[var(--line)] bg-white text-[var(--ink-muted)] hover:border-emerald-200"
+                ? "border-[var(--accent)]/40 bg-[var(--accent-soft)] text-[var(--accent)]"
+                : "border-[var(--line)] bg-[var(--paper-elevated)] text-[var(--ink-muted)] hover:border-white/20 hover:text-white"
             }`}
           >
             {t.title}
@@ -48,7 +48,7 @@ export function AcademyTracks() {
                 />
               </div>
             </div>
-            <h2 className="mt-4 text-xl font-bold text-[var(--ink)]">{video.title}</h2>
+            <h2 className="mt-4 text-xl font-semibold text-white">{video.title}</h2>
             <p className="mt-1 text-sm text-[var(--ink-muted)]">
               {track.title} · {track.level} · {video.duration}
             </p>
@@ -57,7 +57,7 @@ export function AcademyTracks() {
             </p>
           </div>
 
-          <div className="rounded-2xl border border-[var(--line)] bg-white p-3">
+          <div className="rounded-2xl border border-[var(--line)] bg-[var(--paper-elevated)] p-3">
             <p className="px-2 pb-2 pt-1 text-xs font-semibold uppercase tracking-wider text-[var(--ink-muted)]">
               Bu setteki videolar ({track.videos.length})
             </p>
@@ -69,19 +69,19 @@ export function AcademyTracks() {
                   onClick={() => setActiveVideo(i)}
                   className={`flex w-full items-start gap-2.5 rounded-xl px-3 py-2.5 text-left transition ${
                     i === activeVideo
-                      ? "bg-emerald-50 ring-1 ring-emerald-100"
-                      : "hover:bg-[var(--paper)]"
+                      ? "bg-[var(--accent-soft)] ring-1 ring-[var(--accent)]/25"
+                      : "hover:bg-white/[0.04]"
                   }`}
                 >
                   <PlayCircle
                     className={`mt-0.5 h-4 w-4 shrink-0 ${
-                      i === activeVideo ? "text-[var(--accent-hover)]" : "text-[var(--ink-muted)]"
+                      i === activeVideo ? "text-[var(--accent)]" : "text-[var(--ink-muted)]"
                     }`}
                   />
                   <span>
                     <span
                       className={`block text-sm font-medium ${
-                        i === activeVideo ? "text-[var(--accent-deep)]" : "text-[var(--ink)]"
+                        i === activeVideo ? "text-[var(--accent)]" : "text-white"
                       }`}
                     >
                       {v.title}

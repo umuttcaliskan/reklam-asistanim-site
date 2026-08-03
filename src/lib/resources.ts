@@ -74,47 +74,47 @@ export const FAQ_ITEMS: FaqItem[] = [
   {
     question: "Reklam Asistanım tam olarak ne yapar?",
     answer:
-      "Google Ads, Search Console ve Google İşletme Profili hesaplarınızı tek panelde birleştirir. Yapay zeka performansınızı analiz eder, optimizasyon önerileri sunar, kampanya kurulumlarını hazırlar ve haftalık PDF raporlar üretir. Ayrıca AI ile blog içeriği üretip WordPress'e yayınlayabilirsiniz.",
+      "Google Ads (ve yakında Meta Ads), Search Console ve blog/WordPress’i tek panelde birleştirir. Yapay zeka hesabınızı otonom izler, optimizasyon önerileri üretir, kampanya kurulumlarını hazırlar ve haftalık PDF raporlar oluşturur.",
   },
   {
-    question: "Yapay zeka kampanyalarımı benim yerime mi yönetiyor?",
+    question: "Otonom optimizasyon ne demek? Kampanyalarımı AI mı yönetiyor?",
     answer:
-      "AI hesabınızı sürekli izler, önerileri hazırlar ve kampanya taslaklarını kurar; değişiklikler sizin onayınızla uygulanır. Kontrol her zaman sizde kalır — dilerseniz tamamen manuel de çalışabilirsiniz.",
+      "AI bütçe, teklif, arama terimleri ve performansı sürekli tarar; öncelikli aksiyon listesini hazırlar. Değişiklikler sizin onayınızla uygulanır — kontrol her zaman sizde kalır. Dilerseniz tamamen manuel de çalışabilirsiniz.",
   },
   {
     question: "3 gün ücretsiz deneme nasıl çalışıyor?",
     answer:
-      "Kayıt olduğunuzda seçtiğiniz paketi 3 gün boyunca ücretsiz denersiniz. Deneme süresi içinde tüm özelliklere erişirsiniz; memnun kalmazsanız iptal edebilirsiniz.",
+      "Kayıt / erken erişim sonrası seçtiğiniz paketi 3 gün boyunca ücretsiz deneyebilirsiniz. Deneme süresi içinde özellikleri test eder, memnun kalmazsanız iptal edebilirsiniz.",
+  },
+  {
+    question: "Toplantı planlamak zorunlu mu?",
+    answer:
+      "Hayır. Dilerseniz doğrudan 3 günlük denemeye başlayın. Kurumsal ihtiyaç, ajans kurulumu veya Meta erken erişim için “Toplantı planla” ile kısa bir görüşme ayarlayabilirsiniz.",
+  },
+  {
+    question: "Meta Ads ne zaman gelecek?",
+    answer:
+      "Meta Ads entegrasyonu yol haritamızda. Erken erişim / Pro+ kullanıcılarına öncelik verilecek. Site ve panelde “yakında” olarak işaretlenmiştir; canlıya alınca aynı AI asistan Meta hesaplarınızı da kapsayacak.",
   },
   {
     question: "Google Ads hesabımı bağlamak güvenli mi?",
     answer:
-      "Bağlantı Google'ın resmî OAuth altyapısıyla yapılır; şifreniz bizimle asla paylaşılmaz. Erişim tokenları endüstri standartlarında şifrelenerek saklanır ve dilediğiniz an bağlantıyı kesebilirsiniz.",
+      "Bağlantı Google’ın resmî OAuth altyapısıyla yapılır; şifreniz bizimle asla paylaşılmaz. Erişim tokenları şifreli saklanır; dilediğiniz an bağlantıyı kesebilirsiniz.",
   },
   {
-    question: "Birden fazla Google Ads hesabını yönetebilir miyim?",
+    question: "Birden fazla reklam hesabını yönetebilir miyim?",
     answer:
-      "Evet. Profesyonel paket 2–8 hesabı, Kurumsal paket 8'den fazla hesabı destekler. Hesaplar arası özet ekranıyla tüm müşterilerinizi tek bakışta görürsünüz.",
+      "Evet. Profesyonel paket birden fazla Google Ads (ve yakında Meta) hesabını destekler; Kurumsal’da kota özel belirlenir.",
   },
   {
     question: "Blog oluşturucu hangi platformlara yayın yapıyor?",
     answer:
-      "Şu anda WordPress'e otomatik veya planlı yayın destekleniyor. AI, Search Console verinizden konu fırsatları çıkarır, yazıyı ve görselleri üretir, dilerseniz takvime bağlı otomatik yayınlar.",
+      "WordPress’e manuel veya planlı otomatik yayın desteklenir. AI, Search Console verinizden konu fırsatları çıkarır, yazı ve görselleri üretir.",
   },
   {
-    question: "Raporlar hangi sıklıkla oluşuyor?",
+    question: "Kurumsal paket için nasıl görüşme ayarlarım?",
     answer:
-      "Her tamamlanan hafta için detaylı PDF raporu otomatik oluşturulur: KPI karşılaştırmaları, kanal ve cihaz kırılımı, dönüşüm kaynakları, arama terimleri ve fırsatlar. Panelden dilediğiniz an indirebilirsiniz.",
-  },
-  {
-    question: "Mobil uygulama var mı?",
-    answer:
-      "iOS ve Android uygulamalarımız yakında yayında olacak. Kampanyalarınızı ve raporlarınızı telefonunuzdan da yönetebileceksiniz.",
-  },
-  {
-    question: "Kurumsal paket için nasıl görüşme ayarlayabilirim?",
-    answer:
-      "İletişim sayfamızdaki toplantı planlama bağlantısından size uygun bir saat seçebilir veya destek e-postamıza yazabilirsiniz.",
+      "“Toplantı planla” bağlantısından size uygun saati seçebilir veya hello@reklamasistanim.com adresine yazabilirsiniz.",
   },
 ];
 

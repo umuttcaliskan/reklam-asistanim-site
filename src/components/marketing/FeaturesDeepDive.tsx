@@ -21,7 +21,7 @@ export function FeaturesDeepDive() {
               }`}
             >
               <Reveal>
-                <h2 className="text-2xl font-bold tracking-tight text-[var(--ink)] sm:text-3xl">
+                <h2 className="font-[family-name:var(--font-display)] text-2xl font-semibold tracking-tight text-white sm:text-3xl">
                   {feature.title}
                 </h2>
                 <p className="mt-3 text-base leading-relaxed text-[var(--ink-muted)]">
@@ -29,7 +29,7 @@ export function FeaturesDeepDive() {
                 </p>
                 <ul className="mt-6 space-y-2">
                   {feature.bullets.map((b) => (
-                    <li key={b} className="flex gap-2 text-sm text-[var(--ink)]">
+                    <li key={b} className="flex gap-2 text-sm text-[var(--ink-muted)]">
                       <Check className="mt-0.5 h-4 w-4 shrink-0 text-[var(--accent)]" />
                       {b}
                     </li>

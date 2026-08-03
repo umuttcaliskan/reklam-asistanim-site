@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import type { ReactNode } from "react";
 import {
+  Bell,
   Bot,
   Check,
   Download,
@@ -41,7 +42,7 @@ function Window({
 }) {
   return (
     <div
-      className={`overflow-hidden rounded-2xl border border-[var(--line)] bg-white shadow-[var(--shadow)] ${className}`}
+      className={`panel-mock overflow-hidden rounded-2xl border border-[var(--line)] bg-white shadow-[var(--shadow)] ${className}`}
     >
       <div className="flex items-center gap-2 border-b border-[var(--line)] bg-[var(--paper)] px-4 py-2.5">
         <span className="h-2.5 w-2.5 rounded-full bg-rose-300" />
@@ -527,13 +528,13 @@ export function PanelMock({ kind, className = "" }: { kind: MockKind; className?
     gbp: <GbpMock />,
     billing: <BillingMock />,
   };
-  return <div className={className}>{map[kind]}</div>;
+  return <div className={`panel-mock ${className}`}>{map[kind]}</div>;
 }
 
 /* Hero için geniş kompozit mock */
 export function HeroMock() {
   return (
-    <div className="relative">
+    <div className="panel-mock relative">
       <Window title="app.reklamasistanim.com — Özet" className="relative z-10">
         <motion.div variants={stagger} initial="hidden" animate="show">
           <div className="grid grid-cols-2 gap-2 sm:grid-cols-4">
@@ -615,40 +616,128 @@ export function PhoneMock() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-      className="mx-auto w-56"
+      className="panel-mock relative mx-auto w-[240px] sm:w-[260px]"
     >
-      <div className="rounded-[2rem] border-[6px] border-slate-800 bg-white shadow-2xl">
-        <div className="rounded-[1.6rem] bg-[var(--paper)] p-3">
-          <div className="mx-auto mb-3 h-1 w-12 rounded-full bg-slate-300" />
-          <p className="text-[10px] font-semibold text-[var(--ink)]">Merhaba 👋</p>
-          <p className="text-[9px] text-[var(--ink-muted)]">Bugünkü performansınız</p>
-          <div className="mt-2 grid grid-cols-2 gap-1.5">
-            <div className="rounded-lg border border-[var(--line)] bg-white p-2">
-              <p className="text-[8px] text-[var(--ink-muted)]">Harcama</p>
-              <p className="text-xs font-bold text-[var(--ink)]">₺1.240</p>
+      {/* Soft glow behind device */}
+      <div className="pointer-events-none absolute inset-x-4 bottom-2 top-10 rounded-[2.5rem] bg-[var(--accent)]/20 blur-3xl" />
+
+      <div className="relative">
+        {/* Side buttons */}
+        <div className="absolute -left-[3px] top-24 h-7 w-[3px] rounded-l-sm bg-zinc-700" />
+        <div className="absolute -left-[3px] top-36 h-12 w-[3px] rounded-l-sm bg-zinc-700" />
+        <div className="absolute -left-[3px] top-[12.5rem] h-12 w-[3px] rounded-l-sm bg-zinc-700" />
+        <div className="absolute -right-[3px] top-40 h-16 w-[3px] rounded-r-sm bg-zinc-700" />
+
+        {/* Device chassis */}
+        <div className="rounded-[2.35rem] bg-gradient-to-b from-zinc-700 via-zinc-800 to-zinc-900 p-[10px] shadow-[0_30px_60px_-15px_rgba(0,0,0,0.7)] ring-1 ring-white/10">
+          <div className="relative overflow-hidden rounded-[1.85rem] bg-[#f7faf8]">
+            {/* Status bar */}
+            <div className="relative z-10 flex items-center justify-between px-5 pb-1 pt-3">
+              <span className="text-[10px] font-semibold tracking-tight text-zinc-900">9:41</span>
+              <div className="absolute left-1/2 top-2.5 h-[22px] w-[78px] -translate-x-1/2 rounded-full bg-zinc-950 shadow-inner" />
+              <div className="flex items-center gap-1">
+                <span className="flex h-2.5 w-[15px] items-end gap-[1.5px]">
+                  <span className="h-1 w-[2.5px] rounded-sm bg-zinc-800" />
+                  <span className="h-1.5 w-[2.5px] rounded-sm bg-zinc-800" />
+                  <span className="h-2 w-[2.5px] rounded-sm bg-zinc-800" />
+                  <span className="h-2.5 w-[2.5px] rounded-sm bg-zinc-800" />
+                </span>
+                <span className="relative h-[9px] w-[18px] rounded-[2px] border border-zinc-800">
+                  <span className="absolute inset-[1.5px] right-[3px] rounded-[1px] bg-emerald-500" />
+                  <span className="absolute -right-[3px] top-1/2 h-[4px] w-[1.5px] -translate-y-1/2 rounded-r-sm bg-zinc-800" />
+                </span>
+              </div>
             </div>
-            <div className="rounded-lg border border-[var(--line)] bg-white p-2">
-              <p className="text-[8px] text-[var(--ink-muted)]">Dönüşüm</p>
-              <p className="text-xs font-bold text-emerald-600">36 ↑</p>
+
+            {/* App screen */}
+            <div className="px-3.5 pb-3 pt-2">
+              <div className="mb-3 flex items-center justify-between">
+                <div>
+                  <p className="text-[13px] font-semibold tracking-tight text-zinc-900">
+                    Merhaba
+                  </p>
+                  <p className="text-[10px] text-zinc-500">Bugünkü performans</p>
+                </div>
+                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-emerald-500/15 text-emerald-700">
+                  <Bell className="h-3.5 w-3.5" />
+                </span>
+              </div>
+
+              <div className="grid grid-cols-2 gap-2">
+                <div className="rounded-xl border border-zinc-200/80 bg-white p-2.5 shadow-sm">
+                  <p className="text-[9px] font-medium text-zinc-500">Harcama</p>
+                  <p className="mt-0.5 text-[15px] font-bold tracking-tight text-zinc-900">
+                    ₺1.240
+                  </p>
+                  <p className="mt-1 text-[9px] font-semibold text-rose-500">↓ %4</p>
+                </div>
+                <div className="rounded-xl border border-zinc-200/80 bg-white p-2.5 shadow-sm">
+                  <p className="text-[9px] font-medium text-zinc-500">Dönüşüm</p>
+                  <p className="mt-0.5 text-[15px] font-bold tracking-tight text-zinc-900">36</p>
+                  <p className="mt-1 text-[9px] font-semibold text-emerald-600">↑ %12</p>
+                </div>
+              </div>
+
+              <div className="mt-2 rounded-xl border border-emerald-200/80 bg-gradient-to-br from-emerald-50 to-white p-2.5 shadow-sm">
+                <p className="flex items-center gap-1.5 text-[10px] font-semibold text-emerald-800">
+                  <span className="flex h-5 w-5 items-center justify-center rounded-md bg-emerald-500/15">
+                    <Sparkles className="h-3 w-3 text-emerald-600" />
+                  </span>
+                  AI önerisi
+                </p>
+                <p className="mt-1.5 text-[10px] leading-snug text-emerald-900/75">
+                  Marka kampanyası bütçesi artırılabilir — onayla.
+                </p>
+                <div className="mt-2 flex gap-1.5">
+                  <span className="rounded-md bg-emerald-600 px-2 py-1 text-[9px] font-semibold text-white">
+                    Onayla
+                  </span>
+                  <span className="rounded-md border border-emerald-200 bg-white px-2 py-1 text-[9px] font-medium text-emerald-800">
+                    Detay
+                  </span>
+                </div>
+              </div>
+
+              <div className="mt-2 rounded-xl border border-zinc-200/80 bg-white p-2.5 shadow-sm">
+                <div className="mb-2 flex items-center justify-between">
+                  <p className="text-[10px] font-semibold text-zinc-800">7 günlük trend</p>
+                  <p className="text-[9px] text-zinc-400">ROAS</p>
+                </div>
+                <div className="flex h-14 items-end gap-1">
+                  {[36, 52, 44, 68, 58, 82, 74].map((v, i) => (
+                    <div
+                      key={i}
+                      className="flex-1 rounded-t-[3px] bg-gradient-to-t from-emerald-600 to-emerald-400"
+                      style={{ height: `${v}%` }}
+                    />
+                  ))}
+                </div>
+              </div>
+
+              {/* Bottom nav */}
+              <div className="mt-3 flex items-center justify-around rounded-xl border border-zinc-200/80 bg-white px-1 py-2 shadow-sm">
+                {[
+                  { label: "Özet", active: true },
+                  { label: "AI", active: false },
+                  { label: "Rapor", active: false },
+                ].map((tab) => (
+                  <span
+                    key={tab.label}
+                    className={`rounded-lg px-3 py-1 text-[9px] font-semibold ${
+                      tab.active
+                        ? "bg-emerald-500/15 text-emerald-700"
+                        : "text-zinc-400"
+                    }`}
+                  >
+                    {tab.label}
+                  </span>
+                ))}
+              </div>
             </div>
-          </div>
-          <div className="mt-2 rounded-lg border border-emerald-200 bg-emerald-50/60 p-2">
-            <p className="flex items-center gap-1 text-[9px] font-semibold text-emerald-800">
-              <Sparkles className="h-2.5 w-2.5" /> AI önerisi
-            </p>
-            <p className="mt-0.5 text-[8px] leading-relaxed text-emerald-900/80">
-              Marka kampanyası bütçesi artırılabilir
-            </p>
-          </div>
-          <div className="mt-2 rounded-lg border border-[var(--line)] bg-white p-2">
-            <div className="flex h-10 items-end gap-0.5">
-              {[40, 60, 45, 75, 55, 85, 70].map((v, i) => (
-                <div
-                  key={i}
-                  className="flex-1 rounded-t-sm bg-emerald-400"
-                  style={{ height: `${v}%` }}
-                />
-              ))}
+
+            {/* Home indicator */}
+            <div className="flex justify-center pb-2 pt-1">
+              <div className="h-1 w-24 rounded-full bg-zinc-900/80" />
             </div>
           </div>
         </div>

@@ -16,7 +16,9 @@ export function FaqAccordion() {
           <div
             key={item.question}
             className={`overflow-hidden rounded-2xl border transition ${
-              isOpen ? "border-emerald-200 bg-white shadow-[var(--shadow)]" : "border-[var(--line)] bg-white"
+              isOpen
+                ? "border-[var(--accent)]/30 bg-[var(--paper-elevated)]"
+                : "border-[var(--line)] bg-[var(--paper-elevated)]"
             }`}
           >
             <button
@@ -24,12 +26,12 @@ export function FaqAccordion() {
               onClick={() => setOpenIndex(isOpen ? null : i)}
               className="flex w-full items-center justify-between gap-4 px-5 py-4 text-left"
             >
-              <span className="text-sm font-semibold text-[var(--ink)] sm:text-base">
+              <span className="text-sm font-semibold text-white sm:text-base">
                 {item.question}
               </span>
               <ChevronDown
                 className={`h-4 w-4 shrink-0 text-[var(--ink-muted)] transition-transform ${
-                  isOpen ? "rotate-180 text-[var(--accent-hover)]" : ""
+                  isOpen ? "rotate-180 text-[var(--accent)]" : ""
                 }`}
               />
             </button>

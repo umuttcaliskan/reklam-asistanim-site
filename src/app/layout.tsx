@@ -1,20 +1,19 @@
 import type { Metadata } from "next";
-import { Instrument_Serif, Plus_Jakarta_Sans } from "next/font/google";
+import { Manrope, Sora } from "next/font/google";
 import { Footer } from "@/components/marketing/Footer";
 import { Header } from "@/components/marketing/Header";
 import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from "@/lib/site";
 import "./globals.css";
 
-const jakarta = Plus_Jakarta_Sans({
-  variable: "--font-jakarta",
+const manrope = Manrope({
+  variable: "--font-manrope",
   subsets: ["latin", "latin-ext"],
   display: "swap",
 });
 
-const instrument = Instrument_Serif({
-  variable: "--font-instrument",
-  subsets: ["latin"],
-  weight: "400",
+const sora = Sora({
+  variable: "--font-sora",
+  subsets: ["latin", "latin-ext"],
   display: "swap",
 });
 
@@ -76,9 +75,9 @@ export default function RootLayout({
   return (
     <html
       lang="tr"
-      className={`${jakarta.variable} ${instrument.variable} h-full antialiased`}
+      className={`${manrope.variable} ${sora.variable} h-full antialiased`}
     >
-      <body className="flex min-h-full flex-col font-sans">
+      <body className="flex min-h-full flex-col bg-[var(--paper)] font-sans text-[var(--ink)]">
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />

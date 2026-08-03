@@ -28,7 +28,7 @@ export const PLANS: PlanCard[] = [
       "WordPress'e manuel / tek tık yayınlama",
       "Rakip analizi önerileri",
     ],
-    cta: "Solo ile başla",
+    cta: "3 gün ücretsiz dene",
   },
   {
     id: "professional",
@@ -48,8 +48,9 @@ export const PLANS: PlanCard[] = [
       "Yüksek AI kotası",
       "Çoklu kullanıcı / roller",
       "Hesaplar arası özet ve rapor",
+      "Meta Ads yakında — öncelikli erişim",
     ],
-    cta: "Profesyonel'i seç",
+    cta: "3 gün ücretsiz dene",
   },
   {
     id: "enterprise",
@@ -64,8 +65,9 @@ export const PLANS: PlanCard[] = [
       "SSO ve denetim kayıtları",
       "Özel AI kotası",
       "Özel onboarding",
+      "Meta Ads yakında — öncelikli erişim",
     ],
-    cta: "Görüşme talep et",
+    cta: "Toplantı planla",
   },
 ];
 
@@ -95,9 +97,10 @@ export const COMPARISON: ComparisonGroup[] = [
     title: "Yapay zeka",
     rows: [
       { label: "AI kampanya kurulumu", values: [true, true, true] },
-      { label: "Optimizasyon önerileri", values: [true, true, true] },
+      { label: "Otonom optimizasyon önerileri", values: [true, true, true] },
       { label: "AI asistan (sohbet)", values: [true, true, true] },
       { label: "AI kotası", values: ["Standart", "Yüksek", "Özel"] },
+      { label: "Meta Ads (yakında)", values: ["—", "Öncelikli", "Öncelikli"] },
     ],
   },
   {

@@ -18,9 +18,13 @@ const columns: {
   {
     title: "Ürün",
     links: [
-      { href: "/ozellikler", label: "Özellikler" },
+      { href: "/urun/google-ads", label: "Google Ads" },
+      { href: "/urun/meta-ads", label: "Meta Ads (yakında)" },
+      { href: "/urun/organik", label: "Organik & Blog" },
+      { href: "/urun/ai-asistan", label: "AI Asistan" },
+      { href: "/ozellikler", label: "Tüm özellikler" },
       { href: "/fiyatlandirma", label: "Fiyatlandırma" },
-      { href: appRegisterUrl, label: "Ücretsiz dene", external: true },
+      { href: appRegisterUrl, label: "3 gün ücretsiz dene", external: true },
       { href: appLoginUrl, label: "Giriş yap", external: true },
     ],
   },
@@ -53,7 +57,7 @@ const columns: {
 
 export function Footer() {
   return (
-    <footer className="border-t border-[var(--line)] bg-white">
+    <footer className="border-t border-[var(--line)] bg-[var(--paper)]">
       <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6">
         <div className="grid gap-12 lg:grid-cols-[1.2fr_2fr]">
           <div>
@@ -62,36 +66,40 @@ export function Footer() {
               alt={SITE_NAME}
               width={180}
               height={44}
-              className="h-9 w-auto"
+              className="logo-on-dark h-9 w-auto"
             />
             <p className="mt-4 max-w-xs text-sm leading-relaxed text-[var(--ink-muted)]">
-              Yapay zeka destekli reklam yönetim platformu. Google Ads, Search Console ve
-              İşletme Profili verilerinizi tek panelde birleştirir; kampanyalarınızı AI
-              ile yönetir.
+              Google Ads ve yakında Meta Ads: yapay zeka ile otonom optimizasyon, Search
+              Console, AI blog ve WordPress — kontrol sizde.
             </p>
-            <p className="mt-4 inline-block rounded-full bg-emerald-50 px-3 py-1 text-xs font-semibold text-emerald-700 ring-1 ring-emerald-100">
+            <p className="mt-4 inline-block rounded-full border border-[var(--accent)]/25 bg-[var(--accent-soft)] px-3 py-1 text-xs font-semibold text-[var(--accent)]">
               {TRIAL_LABEL}
             </p>
-
-            <div className="mt-6 flex flex-wrap gap-2">
-              <span className="inline-flex cursor-default items-center gap-2 rounded-lg bg-slate-900 px-3 py-2 text-white opacity-90">
+            <div className="mt-5 flex flex-wrap gap-2">
+              <Link
+                href="/#mobil"
+                className="inline-flex items-center gap-2 rounded-lg border border-[var(--line)] bg-white px-3 py-2 text-[#04150f] transition hover:bg-white/90"
+              >
                 <Apple className="h-4 w-4" />
                 <span className="text-left leading-tight">
-                  <span className="block text-[8px] uppercase tracking-wide text-slate-300">
+                  <span className="block text-[8px] uppercase tracking-wide text-black/45">
                     Yakında
                   </span>
                   <span className="block text-xs font-semibold">App Store</span>
                 </span>
-              </span>
-              <span className="inline-flex cursor-default items-center gap-2 rounded-lg bg-slate-900 px-3 py-2 text-white opacity-90">
+              </Link>
+              <Link
+                href="/#mobil"
+                className="inline-flex items-center gap-2 rounded-lg border border-[var(--line)] bg-white px-3 py-2 text-[#04150f] transition hover:bg-white/90"
+              >
                 <Play className="h-4 w-4 fill-current" />
                 <span className="text-left leading-tight">
-                  <span className="block text-[8px] uppercase tracking-wide text-slate-300">
+                  <span className="block text-[8px] uppercase tracking-wide text-black/45">
                     Yakında
                   </span>
                   <span className="block text-xs font-semibold">Google Play</span>
                 </span>
-              </span>
+              </Link>
             </div>
           </div>
 
@@ -109,14 +117,14 @@ export function Footer() {
                           href={l.href}
                           target={l.href.startsWith("http") ? "_blank" : undefined}
                           rel={l.href.startsWith("http") ? "noopener noreferrer" : undefined}
-                          className="break-words text-sm text-[var(--ink)] transition hover:text-[var(--accent-hover)]"
+                          className="break-words text-sm text-[var(--ink-muted)] transition hover:text-[var(--accent)]"
                         >
                           {l.label}
                         </a>
                       ) : (
                         <Link
                           href={l.href}
-                          className="break-words text-sm text-[var(--ink)] transition hover:text-[var(--accent-hover)]"
+                          className="break-words text-sm text-[var(--ink-muted)] transition hover:text-[var(--accent)]"
                         >
                           {l.label}
                         </Link>
@@ -129,8 +137,8 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 flex flex-col gap-4 rounded-2xl border border-[var(--line)] bg-[var(--paper)] px-5 py-4 sm:flex-row sm:items-center sm:justify-between">
-          <p className="text-sm font-medium text-[var(--ink)]">
+        <div className="mt-12 flex flex-col gap-4 rounded-2xl border border-[var(--line)] bg-[var(--paper-elevated)] px-5 py-4 sm:flex-row sm:items-center sm:justify-between">
+          <p className="text-sm font-medium text-white">
             Sorularınız mı var? Ekibimizle tanışın.
           </p>
           <div className="flex flex-wrap gap-2">
@@ -138,14 +146,14 @@ export function Footer() {
               href={MEETING_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 rounded-lg bg-[var(--accent)] px-3.5 py-2 text-xs font-semibold text-white transition hover:bg-[var(--accent-hover)]"
+              className="inline-flex items-center gap-1.5 rounded-lg bg-[var(--accent)] px-3.5 py-2 text-xs font-semibold text-[#04150f] transition hover:bg-[var(--accent-hover)]"
             >
               <CalendarDays className="h-3.5 w-3.5" />
               Toplantı planla
             </a>
             <a
               href={`mailto:${CONTACT_EMAIL}`}
-              className="inline-flex items-center gap-1.5 rounded-lg border border-[var(--line)] bg-white px-3.5 py-2 text-xs font-semibold text-[var(--ink)] transition hover:border-emerald-200"
+              className="inline-flex items-center gap-1.5 rounded-lg border border-[var(--line)] px-3.5 py-2 text-xs font-semibold text-white transition hover:border-white/25"
             >
               <Mail className="h-3.5 w-3.5" />
               E-posta gönder
@@ -157,10 +165,12 @@ export function Footer() {
       <div className="border-t border-[var(--line)]">
         <div className="mx-auto flex max-w-6xl flex-col gap-3 px-4 py-6 text-xs text-[var(--ink-muted)] sm:px-6">
           <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
-            <p>© {new Date().getFullYear()} {SITE_NAME}. Tüm hakları saklıdır.</p>
+            <p>
+              © {new Date().getFullYear()} {SITE_NAME}. Tüm hakları saklıdır.
+            </p>
             <p>
               Uygulama:{" "}
-              <a href={APP_URL} className="font-medium text-[var(--accent-hover)] hover:underline">
+              <a href={APP_URL} className="font-medium text-[var(--accent)] hover:underline">
                 app.reklamasistanim.com
               </a>
             </p>
@@ -169,16 +179,16 @@ export function Footer() {
             aria-label="Yasal bağlantılar"
             className="flex flex-wrap gap-x-4 gap-y-1 sm:justify-end"
           >
-            <Link href="/gizlilik-politikasi" className="hover:text-[var(--accent-hover)] hover:underline">
+            <Link href="/gizlilik-politikasi" className="hover:text-[var(--accent)] hover:underline">
               Gizlilik
             </Link>
-            <Link href="/hizmet-sartlari" className="hover:text-[var(--accent-hover)] hover:underline">
+            <Link href="/hizmet-sartlari" className="hover:text-[var(--accent)] hover:underline">
               Hizmet Şartları
             </Link>
-            <Link href="/cerez-politikasi" className="hover:text-[var(--accent-hover)] hover:underline">
+            <Link href="/cerez-politikasi" className="hover:text-[var(--accent)] hover:underline">
               Çerez Politikası
             </Link>
-            <Link href="/kvkk" className="hover:text-[var(--accent-hover)] hover:underline">
+            <Link href="/kvkk" className="hover:text-[var(--accent)] hover:underline">
               KVKK
             </Link>
           </nav>

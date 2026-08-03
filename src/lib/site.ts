@@ -7,7 +7,7 @@ export const APP_URL =
 export const appRegisterUrl = `${APP_URL}/register`;
 export const appLoginUrl = `${APP_URL}/login`;
 
-export const CONTACT_EMAIL = "destek@reklamasistanim.com";
+export const CONTACT_EMAIL = "hello@reklamasistanim.com";
 
 /** Takvim / toplantı planlama linki — kendi Calendly / Google Calendar linkinizle değiştirin. */
 export const MEETING_URL = "https://calendly.com/reklamasistanim/tanisma";
@@ -15,4 +15,5 @@ export const MEETING_URL = "https://calendly.com/reklamasistanim/tanisma";
 export const TRIAL_LABEL = "3 gün ücretsiz deneme";
 
 export const SITE_DESCRIPTION =
-  "Yapay zeka Google Ads kampanyalarınızı yönetsin: otomatik optimizasyon, analiz, haftalık PDF raporlar, Search Console ve içerik üretimi — Reklam Asistanım.";
+  "Google Ads ve yakında Meta Ads: yapay zeka ile otonom optimizasyon, Search Console, AI blog ve WordPress — Reklam Asistanım. 3 gün ücretsiz deneyin veya toplantı planlayın.";
+
