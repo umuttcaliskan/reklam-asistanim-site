@@ -29,7 +29,7 @@ export default function OrganikProductPage() {
             WordPress’e tek tıkla veya zamanlanmış yayınlasın.
           </p>
           <p>
-            Profesyonel pakette site başına daha yüksek blog kotası ve AI ile 1 aylık içerik
+            Profesyonel pakette site başına haftalık 2 blog yazısı ve AI ile 1 aylık içerik
             planı bulunur — ajanslar birden fazla siteyi aynı disiplinle yönetebilir.
           </p>
         </>

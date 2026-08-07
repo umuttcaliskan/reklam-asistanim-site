@@ -24,7 +24,7 @@ export const PLANS: PlanCard[] = [
       "Yapay zeka ile kampanya oluşturma",
       "AI optimizasyon önerileri",
       "1 Search Console bağlantısı",
-      "Haftalık 4 blog yazısı + görsel",
+      "Haftalık 1 blog yazısı + görsel",
       "WordPress'e manuel / tek tık yayınlama",
       "Rakip analizi önerileri",
     ],
@@ -41,9 +41,9 @@ export const PLANS: PlanCard[] = [
     features: [
       "2–8 Google Ads hesabı",
       "Hesap başına GSC bağlantısı",
-      "Site başına haftalık 10 blog",
+      "Site başına haftalık 2 blog",
       "AI ile 1 aylık blog planı (site başına)",
-      "Günlük otomatik yayın + kapak görseli",
+      "Haftada 2 otomatik yayın + kapak görseli",
       "WordPress zamanlanmış yayın",
       "Yüksek AI kotası",
       "Çoklu kullanıcı / roller",
@@ -106,11 +106,11 @@ export const COMPARISON: ComparisonGroup[] = [
   {
     title: "İçerik ve organik",
     rows: [
-      { label: "Haftalık AI blog yazısı", values: ["4", "Site başına 10", "Özel"] },
+      { label: "Haftalık AI blog yazısı", values: ["1", "Site başına 2", "Özel"] },
       { label: "AI görsel üretimi", values: [true, true, true] },
       { label: "WordPress yayın", values: ["Manuel / tek tık", "Zamanlanmış otomatik", "Zamanlanmış"] },
       { label: "AI aylık blog planı", values: [false, true, true] },
-      { label: "Günlük otomatik yayın (yazı+görsel)", values: [false, true, true] },
+      { label: "Haftada 2 otomatik yayın (yazı+görsel)", values: [false, true, true] },
     ],
   },
   {
