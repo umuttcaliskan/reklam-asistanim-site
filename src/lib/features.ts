@@ -139,24 +139,6 @@ export const FEATURES: FeatureBlock[] = [
   },
 ];
 
-export const HOW_IT_WORKS = [
-  {
-    step: "1",
-    title: "Hesapları bağlayın",
-    text: "Google Ads (ve yakında Meta) ile Search Console’u güvenli OAuth ile bağlayın.",
-  },
-  {
-    step: "2",
-    title: "AI otonom izlesin",
-    text: "Yapay zeka bütçe, teklif ve arama terimlerini sürekli tarar; aksiyon listesini hazırlar.",
-  },
-  {
-    step: "3",
-    title: "Onaylayın, büyütün",
-    text: "Önerileri onayınızla uygulayın; blog ve raporlarla organik ve ücretli büyümeyi takip edin.",
-  },
-];
-
 export const PRODUCT_PILLARS = [
   {
     id: "google-ads",

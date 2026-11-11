@@ -3,14 +3,20 @@
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ChevronDown } from "lucide-react";
-import { FAQ_ITEMS } from "@/lib/resources";
+import { FAQ_ITEMS, type FaqItem } from "@/lib/resources";
 
-export function FaqAccordion() {
+export function FaqAccordion({
+  items = FAQ_ITEMS,
+  className = "mx-auto max-w-3xl space-y-3 px-4 py-12 sm:px-6",
+}: {
+  items?: FaqItem[];
+  className?: string;
+}) {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   return (
-    <div className="mx-auto max-w-3xl space-y-3 px-4 py-12 sm:px-6">
-      {FAQ_ITEMS.map((item, i) => {
+    <div className={className}>
+      {items.map((item, i) => {
         const isOpen = openIndex === i;
         return (
           <div

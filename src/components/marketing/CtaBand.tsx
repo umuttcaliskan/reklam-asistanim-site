@@ -6,10 +6,10 @@ import { Reveal } from "@/components/marketing/Reveal";
 import { TRIAL_LABEL } from "@/lib/site";
 
 const highlights = [
-  { icon: Bot, label: "Otonom AI izleme" },
-  { icon: Zap, label: "Onaylı aksiyonlar" },
+  { icon: Bot, label: "Her sabah AI denetimi" },
+  { icon: Zap, label: "Onay ya da otopilot" },
   { icon: FileText, label: "Haftalık PDF" },
-  { icon: ShieldCheck, label: "Kontrol sizde" },
+  { icon: ShieldCheck, label: "7 gün geri alma" },
 ];
 
 export function CtaBand() {
@@ -27,12 +27,12 @@ export function CtaBand() {
           </p>
 
           <h2 className="mt-5 font-[family-name:var(--font-display)] text-3xl font-semibold leading-tight text-white sm:text-4xl">
-            Otonom optimizasyona bugün başlayın.
+            Hesabınız yarın sabah ilk raporunu alsın.
           </h2>
 
           <p className="mt-4 max-w-lg text-base leading-relaxed text-white/70">
-            3 gün ücretsiz deneyin veya kısa bir tanışma toplantısı ayarlayın. Google Ads
-            hazır; Meta Ads yakında.
+            Google Ads hesabınızı bağlayın, 3 gün ücretsiz deneyin. Kurulumda yardım isterseniz
+            kısa bir tanışma toplantısı ayarlayalım.
           </p>
 
           <div className="mt-8 flex w-full justify-center">

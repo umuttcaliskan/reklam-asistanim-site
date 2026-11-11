@@ -41,7 +41,7 @@ const productLinks = [
   {
     href: "/urun/ai-asistan",
     label: "AI Asistan",
-    description: "Otonom öneri, onay sizde",
+    description: "Öneri kartları ve otopilot",
     icon: Bot,
   },
   {

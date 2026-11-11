@@ -1,19 +1,25 @@
 # Görseller
 
-Panel ekranları artık **kodlanmış animasyonlu mockup'lar** ile gösteriliyor
-(`src/components/marketing/PanelMock.tsx`) — özellik görsellerine gerek yok.
+## Panel ekran görüntüleri (`public/images/panel/`)
 
-Gereken tek dosya:
+Ana sayfadaki panel görüntüleri gerçek web panelinden **kurgusal demo verisiyle**
+alınmıştır (Mermer Hammam, Nilüfer Güzellik). Gerçek müşteri adı ya da canlı veri yoktur.
 
-| Dosya | Kullanım | Brief |
-|-------|----------|--------|
-| `public/images/og-default.png` | Open Graph / sosyal paylaşım | 1200×630 — logo + kısa slogan, emerald vurgu, açık zemin |
+- Kaynak: `reklam-asistanim-web` reposundaki `demo/site-gorselleri` branch'i.
+  `DEMO_MODE=1` ile panel backend'e gitmeden örnek veri döner; görüntüler
+  `window.__shot` / `window.__card` ile 2x PNG olarak `demo-shots/` klasörüne yazılır.
+- Tam ekranlar 1440×900 pencerede, geniş kartlar 720px pencerede çekilir (yazı okunur kalsın).
+- Kod tarafında `src/components/marketing/home/shots.ts` statik import eder;
+  `next/image` boyutlandırır ve modern formata çevirir.
 
-Opsiyonel:
+## Mobil (`public/images/mobil/`)
 
-- Logo wordmark varyantı (`public/`)
-- Gerçek panel ekran görüntüleri eklemek isterseniz mockup'ların yerine
-  `next/image` ile kullanabilirsiniz.
+Mağaza ekran görüntülerinden (`m9-kalite/magaza`) 1434px yüksekliğe küçültülmüştür.
+
+## Paylaşım görseli
+
+`src/app/opengraph-image.tsx` derlemede üretilir (1200×630). Türkçe karakterler için
+`src/app/_og/` içindeki Manrope (OFL) fontları kullanılır.
 
 ## Akademi videoları
 

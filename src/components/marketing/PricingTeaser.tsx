@@ -64,16 +64,13 @@ export function PricingTeaser() {
       <div className="mx-auto max-w-6xl px-4 py-16 sm:px-6 sm:py-20">
         <Reveal>
           <h2 className="text-center font-[family-name:var(--font-display)] text-2xl font-semibold tracking-tight text-white sm:text-3xl">
-            Basit fiyatlandırma
+            Sade fiyatlandırma
           </h2>
           <p className="mx-auto mt-3 max-w-lg text-center text-[var(--ink-muted)]">
-            Solo’dan Kurumsal’a — ihtiyacınıza göre ölçekleyin.
+            Tek işletmeden ajansa, hesap sayınıza göre ölçeklenir.
           </p>
           <p className="mx-auto mt-3 w-fit rounded-full border border-[var(--accent)]/25 bg-[var(--accent-soft)] px-3 py-1 text-center text-xs font-semibold text-[var(--accent)]">
             Tüm paketlerde {TRIAL_LABEL}
-          </p>
-          <p className="mx-auto mt-2 text-center text-xs text-[var(--ink-muted)]">
-            Meta Ads yakında — Pro+ öncelikli erişim
           </p>
         </Reveal>
 

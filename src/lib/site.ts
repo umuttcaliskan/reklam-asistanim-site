@@ -14,6 +14,7 @@ export const MEETING_URL = "https://calendly.com/reklamasistanim/tanisma";
 
 export const TRIAL_LABEL = "3 gün ücretsiz deneme";
 
-export const SITE_DESCRIPTION =
-  "Google Ads ve yakında Meta Ads: yapay zeka ile otonom optimizasyon, Search Console, AI blog ve WordPress — Reklam Asistanım. 3 gün ücretsiz deneyin veya toplantı planlayın.";
+export const SITE_TAGLINE = "Google Ads için Yapay Zeka Asistanı";
 
+export const SITE_DESCRIPTION =
+  "Google Ads hesabınızı her sabah denetleyen yapay zeka: boşa harcamayı bulur, bütçe ve teklifleri optimize eder; onayınızla ya da otopilotta uygular. 3 gün ücretsiz.";

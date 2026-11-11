@@ -74,17 +74,17 @@ export const FAQ_ITEMS: FaqItem[] = [
   {
     question: "Reklam Asistanım tam olarak ne yapar?",
     answer:
-      "Google Ads (ve yakında Meta Ads), Search Console ve blog/WordPress’i tek panelde birleştirir. Yapay zeka hesabınızı otonom izler, optimizasyon önerileri üretir, kampanya kurulumlarını hazırlar ve haftalık PDF raporlar oluşturur.",
+      "Google Ads hesabınızı her sabah bir reklam uzmanı gibi denetler: bütçe temposu, teklif stratejisi, arama terimleri, reklam öğeleri, hedefleme ve dönüşüm ayarları. Bulduklarını uygulanabilir öneri kartlarına çevirir; isterseniz otopilotta kendisi uygular. Search Console, blog ve WordPress de aynı panelde.",
   },
   {
-    question: "Otonom optimizasyon ne demek? Kampanyalarımı AI mı yönetiyor?",
+    question: "Yapay zeka Ads hesabımda benden habersiz değişiklik yapar mı?",
     answer:
-      "AI bütçe, teklif, arama terimleri ve performansı sürekli tarar; öncelikli aksiyon listesini hazırlar. Değişiklikler sizin onayınızla uygulanır — kontrol her zaman sizde kalır. Dilerseniz tamamen manuel de çalışabilirsiniz.",
+      "Hayır. Varsayılan modda her değişiklik sizin Uygula demenizle yapılır. Otopilotu açarsanız yalnız sizin seçtiğiniz işlem türlerini, belirlediğiniz sınırlar içinde uygular ve size raporlar. Bütçe adımı en fazla %20'dir, rakip ve marka kurallarınız delinmez, her işlem 7 gün boyunca geri alınabilir.",
   },
   {
     question: "3 gün ücretsiz deneme nasıl çalışıyor?",
     answer:
-      "Kayıt / erken erişim sonrası seçtiğiniz paketi 3 gün boyunca ücretsiz deneyebilirsiniz. Deneme süresi içinde özellikleri test eder, memnun kalmazsanız iptal edebilirsiniz.",
+      "Kayıt olup paketinizi seçtikten sonra 3 gün boyunca ücretsiz kullanırsınız. Deneme süresi içinde özellikleri test eder, memnun kalmazsanız iptal edebilirsiniz.",
   },
   {
     question: "Toplantı planlamak zorunlu mu?",
@@ -198,5 +198,22 @@ export const ACADEMY_TRACKS: AcademyTrack[] = [
       { title: "Hedef kitle ve yerleşimler", duration: "8:47", youtubeId: PLACEHOLDER_VIDEO },
       { title: "Kreatif en iyi uygulamaları", duration: "7:03", youtubeId: PLACEHOLDER_VIDEO },
     ],
+  },
+];
+
+/** Ana sayfadaki kısa SSS (SSS sayfasındaki tam listeden seçilmiş). */
+export const HOME_FAQ: FaqItem[] = [
+  FAQ_ITEMS[1],
+  {
+    question: "Hangi reklam hesaplarıyla çalışıyor?",
+    answer:
+      "Bugün Google Ads: Arama, Performance Max, Display, Video ve Alışveriş kampanyaları. Meta Ads (Facebook ve Instagram) yakında geliyor. Search Console, Google İşletme Profili ve WordPress bağlantıları da hazır.",
+  },
+  FAQ_ITEMS[2],
+  FAQ_ITEMS.find((f) => f.question.startsWith("Google Ads hesabımı bağlamak"))!,
+  {
+    question: "Ajanslar ve ekipler için uygun mu?",
+    answer:
+      "Evet. Profesyonel pakette birden fazla Google Ads hesabını yönetir, ekip arkadaşlarınızı davet edersiniz. Her üye yalnız kendisine atanan hesapları görür ve yalnız izin verdiğiniz işlemleri yapar. Daha büyük ekipler için Kurumsal paket var.",
   },
 ];
